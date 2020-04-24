@@ -20,7 +20,6 @@ class Project
     all_backers = ProjectBacker.all.select do |backer|
         backer.project == self
     end
-    # I still need to return the array
     all_backers.map {|pbacker| pbacker.backer}
     end
     
