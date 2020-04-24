@@ -17,6 +17,4 @@ class Project
             project.backer
         end
     end
-
-
 end

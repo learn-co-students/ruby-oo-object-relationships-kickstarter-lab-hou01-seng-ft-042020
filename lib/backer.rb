@@ -22,10 +22,7 @@ class Backer
         all_projectBaker.map do |all_project|
             all_project.project
         end
-
     end
-
-
 end
 
 # binding.pry
