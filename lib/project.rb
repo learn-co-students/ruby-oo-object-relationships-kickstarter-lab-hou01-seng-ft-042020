@@ -1,6 +1,7 @@
 class Project
+
   attr_reader :title
-  
+
   @@all = []
 
   def initialize (title)
@@ -13,18 +14,11 @@ class Project
   end
 
   def add_backer(backer)
-    ProjectBacker.new(self, backer)
+    ProjectBacker.new(self,backer)
   end
 
-  def temp
-    ProjectBacker.all.select do |backer|
-      backer.project == self
-    end
-  end
-  
-  def backers
-    temp.map do |value| 
-      value.backer
-    end
+  def backers #returns an array of backers associated with this Project instance
+    pb = ProjectBacker.all.select {|object| object.project == self}
+    pb.map {|x| x.backer}
   end
 end
